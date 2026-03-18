@@ -1,0 +1,26 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* @layer base {
+  :root {
+    --bg-primary: 0, 0%, 8%;
+    --text-primary: 0, 0%, 100%;
+    --border-primary: 0, 0%, 100%;
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg-primary: 0, 0%, 100%;
+      --text-primary: 0, 0%, 0%;
+      --border-primary: 0, 0%, 0%;
+    }
+  }
+} */
+
+
+@layer base {
+  body * {
+    /* Apply a super smooth dark mode transition to prevent hurting of eyes when the user switches from dark -> light mode */
+    @apply transition-colors duration-3000;
+  }
+}
